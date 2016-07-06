@@ -29,9 +29,9 @@
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
 
-	<!--bootstrap schifo-->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!--fancy things-->
+	<script src="js/wow.js"></script>
+	<link rel="stylesheet" href="css/animate.css">
   </head>
 
 
@@ -50,13 +50,13 @@
 
 <!--TITLE-->
 <div id="tip">
-	<h3 class="tip_title">Take a photo of the raspberry</h3>
-	<h3 class="tip_subtitle">and upload it</h3>
+	<h3 class="tip_title wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">Take a photo of the raspberry</h3>
+	<h3 class="tip_subtitle wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.7s">and upload it</h3>
 </div>
 
 
 
-<div id="camera_photo">
+<div id="camera_photo" class="wow fadeIn" data-wow-duration="1s" data-wow-delay="1.2s">
 	<img id="photo" ng-repeat="image in images" ng-src="{{urlForImage(image)}}" height="250px"/>
 </div>
 
@@ -65,7 +65,7 @@
 	
 
 <!--NEXT STEP-->
-<div class="step_position">
+<div class="step_position wow fadeInDown" data-wow-duration="1s" data-wow-delay="1.5s">
 	<button class="step_buttons" class="camera_button" ng-click="addImage()">
 		<i class="icon ion-camera"></i>
 	</button>
@@ -76,20 +76,20 @@
 </div>
 
 <!--INDICATORS-->
-<div class="indicator_position">
+<div class="indicator_position wow fadeIn" data-wow-duration="1s" data-wow-delay="1.7s">
 
-		<div class="indicator" style="background:#fff;">
+		<div class="indicator" id="circle" style="background:#fff;">
 		</div>
 		<a href="result.html" style="font-size:1em;">
-			<i class="ion-checkmark-round" style="font-size: 1.8em;
-    line-height: 0px;
-    color: #fff;
-    color: rgba(255,255,255,0.3);
-    margin-left: 0;"></i>
+			<i class="ion-checkmark-round" id="tick"></i>
 		</a>
 		
 
 </div>
+
+<script>
+new WOW().init();
+</script>
     <!--
       The views will be rendered in the <ion-nav-view> directive below
       Templates are in the /templates folder (but you could also

@@ -29,7 +29,7 @@
   </head>
 
 
-  <body>
+  <body ng-app="result" ng-controller="results_controller">
    
 
 <!--MENUS-->
@@ -45,7 +45,7 @@
 <!--TITLE-->
 <div id="tip">
 	<h3 class="tip_title">Result</h3>
-	<h3 class="tip_subtitle" style="font-weight:600;">Ripe</h3>
+	<h3 id="output" class="tip_subtitle" style="font-weight:600;"></h3>
 </div>
 
 <!--CAMERA-->
@@ -59,10 +59,10 @@
 	</a>
 </div>
 
-<!--INDICATORS-->
+<!--INDICATORS
 <div class="indicator_position" style="width:40vw;">
 	<p><span style="font-weight:600; color:#fff;">Sample id</span> numero</p>
-</div>
+</div>-->
     <!--
       The views will be rendered in the <ion-nav-view> directive below
       Templates are in the /templates folder (but you could also

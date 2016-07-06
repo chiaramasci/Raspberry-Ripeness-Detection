@@ -63,6 +63,13 @@ button{
 	float:left;
 	margin-top: 4px;}
 
+#tick{
+	font-size: 1.8em;
+    line-height: 0px;
+    color: #fff;
+    opacity:0.3;
+    margin-left: 0;}
+
 #bar{
 	position:fixed;
 	top:0;

@@ -26,23 +26,36 @@
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
+
+	<!--fancy things-->
+	<script src="js/wow.js"></script>
+	<link rel="stylesheet" href="css/animate.css">
   </head>
 
 
-  <body ng-app="spectrometer">
+  <body ng-app="index">
    
 
 <!--MENUS-->
+<ion-side-menus ng-controller="ContentController">
+  <!-- Left menu -->
+  <ion-side-menu side="left"">
+  </ion-side-menu>
 
+</ion-side-menus>
 
 <div id="entry">
-<img src="img/index.png" width="175" style="">
-<h1 id="title">Raspberry Ripeness Detection</h1>
+<img src="img/index.png" width="175" class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+<h1 id="title" class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.7s">Raspberry Ripeness Detection</h1>
 </div>
 
-<div class="step_position">
+<div class="step_position wow fadeInDown" data-wow-duration="1s" data-wow-delay="1.2s">
 	<a href="step1.html" class="step_buttons">START</a>
 </div>
+
+<script>
+new WOW().init();
+</script>
     <!--
       The views will be rendered in the <ion-nav-view> directive below
       Templates are in the /templates folder (but you could also
