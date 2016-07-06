@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/ionicons.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+	<!--ngcordova js-->
+	<script src="lib/ionic/js/ng-cordova.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+
+	<!--bootstrap schifo-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+
+
+  <body ng-app="spectrometer" ng-controller='banana'>
+   
+
+<!--MENUS-->
+
+
+<!--BAR-->
+<div id="bar">
+	<div id="bar_position">
+		<img src="img/icon.png" height="40" style="margin-left:auto; margin-right:auto;">
+	</div>
+</div>
+
+<!--TITLE-->
+<div id="tip">
+	<h3 class="tip_title">Take a photo of the raspberry</h3>
+	<h3 class="tip_subtitle">and upload it</h3>
+</div>
+
+
+
+<div id="camera_photo">
+	<img id="photo" ng-repeat="image in images" ng-src="{{urlForImage(image)}}" height="250px"/>
+</div>
+
+<canvas id="canvas" style="opacity:0;" width="300" height="300">
+</canvas>
+	
+
+<!--NEXT STEP-->
+<div class="step_position">
+	<button class="step_buttons" class="camera_button" ng-click="addImage()">
+		<i class="icon ion-camera"></i>
+	</button>
+
+	<button class="step_buttons" ng-click="upload_file()">
+		<i class="ion-ios-paperplane" style="font-size:2.6em"></i>
+	</button>
+</div>
+
+<!--INDICATORS-->
+<div class="indicator_position">
+
+		<div class="indicator" style="background:#fff;">
+		</div>
+		<a href="result.html" style="font-size:1em;">
+			<i class="ion-checkmark-round" style="font-size: 1.8em;
+    line-height: 0px;
+    color: #fff;
+    color: rgba(255,255,255,0.3);
+    margin-left: 0;"></i>
+		</a>
+		
+
+</div>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view class="view"></ion-nav-view>
+  </body>
+</html>

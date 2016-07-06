@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/ionicons.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+  </head>
+
+
+  <body >
+   
+
+<!--MENUS-->
+	<ion-side-menus>
+		<!--HEADER BAR-->
+		<ion-side-menu-content>
+			<ion-header-bar class="bar-dark">
+				<h1 class="title">Spectrometer</h1>
+				<h2 class="title">Measuring fruit quality</h2>
+			</ion-header-bar>
+			<ion-content>
+			</ion-content>
+		</ion-side-menu-content>
+
+		<!--LEFT MENU-->
+		<ion-side-menu side="left">
+			<ion-header-bar class="bar-dark">
+				<h1 class="title">Stuff</h1>
+			</ion-header-bar>
+		</ion-side-menu>
+
+	</ion-side-menus>
+
+<!--BAR-->
+<div id="bar">
+	<div id="bar_position">
+		<img>
+		<h1 id="bar_title">Spectrometer</h1>
+	</div>
+</div>
+
+<!--TITLE-->
+<div id="tip">
+	<h3 class="tip_title">Calibrate the spectra</h3>
+	<h3 class="tip_subtitle">Make it fit inside the area</h3>
+</div>
+
+<!--CAMERA-->
+<div id="camera" style="height:12%;">
+</div>
+
+<!--RANGE-->
+<div id="inputs">
+	<div class="range_field">
+	<p class="range_description">Left</p>
+	<input type="range" name="points" min="0" max="10" class="range_carino">
+	</div>
+
+	<div class="range_field">
+	<p class="range_description">Top</p>
+	<input type="range" name="points" min="0" max="10" class="range_carino">
+	</div>
+
+	<div class="range_field">
+	<p class="range_description">Right</p>
+	<input type="range" name="points" min="0" max="10" class="range_carino">
+	</div>
+
+	<div class="range_field">
+	<p class="range_description">Bottom</p>
+	<input type="range" name="points" min="0" max="10" class="range_carino">
+	</div>
+
+	<div class="range_field">
+	<p class="range_description">Rotation</p>
+	<input type="range" name="points" min="0" max="10" class="range_carino">
+	</div>
+</div>
+
+<!--NEXT STEP-->
+<div class="step_position">
+	<a href="step4.html" class="step_buttons">
+		<i class="icon ion-ios-settings-strong"></i>
+	</a>
+</div>
+
+<!--INDICATORS-->
+<div class="indicator_position">
+
+		<div class="indicator">
+		</div>
+		<div class="indicator" >
+		</div>
+		<div class="indicator" style="background:#fff;">
+		</div>
+		<div class="indicator" style="margin-right:0;">
+		</div>
+
+</div>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view class="view"></ion-nav-view>
+  </body>
+</html>
